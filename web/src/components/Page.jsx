@@ -85,7 +85,7 @@ useEffect (()=>{
   return (
     <main className="main">
     <Preview formData={data}/>
-    <Form formData={data} form={changeForm} updateAvatar={updateAvatar} postData={postData} setData={setData} url={url}/>
+    <Form formData={data} form={changeForm} updateAvatar={updateAvatar} postData={postData} setData={setData} url={url} setUrl={setUrl}/>
  
   </main>
   )

@@ -3,7 +3,7 @@ import Reset from "./Reset";
 
 
 
-function Form({form, updateAvatar, formData, postData, url, setData}) {
+function Form({form, updateAvatar, formData, postData, url, setData, setUrl}) {
   
     const handleInputChange =(event)=>{
       const id = event.target.id;
@@ -13,11 +13,10 @@ function Form({form, updateAvatar, formData, postData, url, setData}) {
      const handleClickUrl =(event)=>{
       event.preventDefault();
       postData();
-      
     }
 
-     
-    
+    const urlText = url !== '' ? `Pulsa aquí para ver tu invitación: ${url}`: "";
+    const urlTextClass = url !== ''? 'urlText':""; 
 
   return (
     <form className="addForm">
@@ -44,10 +43,9 @@ function Form({form, updateAvatar, formData, postData, url, setData}) {
         <Button  labelText="Subir foto que os represente"   id="image"updateAvatar={updateAvatar}/>
         <Button  labelText="Subir foto vuestra"   id="photo" updateAvatar={updateAvatar}/>
         <button className="button--large" onClick= {handleClickUrl}>Crear invitación</button>
-       <Reset setData={setData}/>
-        <p>{url}</p>
+       <Reset setUrl={setUrl} setData={setData}/>
       </fieldset>
-      
+      <a className={urlTextClass} href={url} target="_blank">{urlText}</a>
     </form>
   )
 }

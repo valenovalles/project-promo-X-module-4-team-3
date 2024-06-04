@@ -537,4 +537,18 @@
      
     }
   }
+
+  .urlText{
+    text-decoration: none;
+    color: var(--color-greyish-brown);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: solid 2px var(--color-dark-lilac);
+    margin: 15px;
+    padding: 5px;
+    border-radius: 40px;
+    background-color: var(--color-dark);
+    font-size: 0.875rem;
+  }
   
