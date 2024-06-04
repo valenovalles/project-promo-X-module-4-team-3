@@ -1,15 +1,24 @@
 
 import { Link } from 'react-router-dom';
 import Card from './Card';
-import cardsData from '../services/cardsData.json';
+// import cardsData from '../services/cardsData.json';
 import { useEffect, useState } from 'react';
 
 const LandingPage = () => {
-  const [cards, setCards] = useState(cardsData);
+  const [cards, setCards] = useState([]);
 
-  useEffect(() => {
-    setCards(cardsData);
+   useEffect(() => {
+
+    fetch("http://localhost:3000/cards")
+    .then((response)=>response.json())
+    .then(data=>{
+      setCards(data.results)
+    })
   }, []);
+
+  // useEffect(() => {
+  //   setCards(cardsData);
+  // }, []);
 
   return (
     <main>
