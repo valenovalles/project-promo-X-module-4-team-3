@@ -26,8 +26,8 @@ function Form({form, updateAvatar, formData, postData, url, setData, setUrl}) {
         <input className="addForm__input" type="text" value={formData.name} name="name" id="name" placeholder="Nombre de los invitados" onChange={handleInputChange}/>
         <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Fecha del enlace" value={formData.slogan} onChange={handleInputChange}/>
         <div className="addForm__2col">
-          <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Url ubicación" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
-          <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Lista de regalos" onChange={handleInputChange}/>
+          <input className="addForm__input" type="url" name="repo" value={formData.repo} id="repo" placeholder="Url ubicación" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
+          <input className="addForm__input" type="url" name="demo" value={formData.demo} id="demo" placeholder="Lista de regalos" onChange={handleInputChange}/>
         </div>         
         <input className="addForm__input" type="text" value={formData.technologies} name="technologies" id="technologies" placeholder="Escribe aquí cómo quieres que contacten tus invitados" onChange={handleInputChange}/> {/* podría ser un select de si necesitas bus o no */}
         <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Dedica unas palabras a tus invitados" value={formData.desc} rows="5" onChange={handleInputChange}></textarea>
