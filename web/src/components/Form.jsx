@@ -23,20 +23,20 @@ function Form({form, updateAvatar, formData, postData, url, setData, setUrl}) {
       <h2 className="title">¡CREA TU INVITACIÓN DE BODA!</h2>
       <fieldset className="addForm__group">
         <legend className="addForm__title">Información del encuentro</legend>
-        <input className="addForm__input" type="text" value={formData.name} name="name" id="name" placeholder="Nombre de los invitados" onChange={handleInputChange}/>
-        <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Fecha del enlace" value={formData.slogan} onChange={handleInputChange}/>
+        <input className="addForm__input" type="text" value={formData.NAME} name="name" id="name" placeholder="Nombre de los invitados" onChange={handleInputChange}/>
+        <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Fecha del enlace" value={formData.date} onChange={handleInputChange}/>
         <div className="addForm__2col">
-          <input className="addForm__input" type="url" name="repo" value={formData.repo} id="repo" placeholder="Url ubicación" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
-          <input className="addForm__input" type="url" name="demo" value={formData.demo} id="demo" placeholder="Lista de regalos" onChange={handleInputChange}/>
+          <input className="addForm__input" type="url" name="repo" value={formData.ubicacion} id="repo" placeholder="Url ubicación" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
+          <input className="addForm__input" type="url" name="demo" value={formData.gift} id="demo" placeholder="Lista de regalos" onChange={handleInputChange}/>
         </div>         
-        <input className="addForm__input" type="text" value={formData.technologies} name="technologies" id="technologies" placeholder="Escribe aquí cómo quieres que contacten tus invitados" onChange={handleInputChange}/> {/* podría ser un select de si necesitas bus o no */}
-        <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Dedica unas palabras a tus invitados" value={formData.desc} rows="5" onChange={handleInputChange}></textarea>
+        <input className="addForm__input" type="text" value={formData.contact} name="technologies" id="technologies" placeholder="Escribe aquí cómo quieres que contacten tus invitados" onChange={handleInputChange}/> {/* podría ser un select de si necesitas bus o no */}
+        <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Dedica unas palabras a tus invitados" value={formData.message} rows="5" onChange={handleInputChange}></textarea>
       </fieldset>
 
       <fieldset className="addForm__group">
         <legend className="addForm__title">Cuéntanos sobre el enlace</legend>
-        <input className="addForm__input" type="text" value={formData.autor} name="autor" id="autor" placeholder="Vuestros nombres" onChange={handleInputChange}/>
-        <input className="addForm__input" type="text" value={formData.job} name="job" id="job" placeholder="Una frase que os represente" onChange={handleInputChange}/>
+        <input className="addForm__input" type="text" value={formData.coupleName} name="autor" id="autor" placeholder="Vuestros nombres" onChange={handleInputChange}/>
+        <input className="addForm__input" type="text" value={formData.quote} name="job" id="job" placeholder="Una frase que os represente" onChange={handleInputChange}/>
       </fieldset>
 
       <fieldset className="addForm__group--upload">

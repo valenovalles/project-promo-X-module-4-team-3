@@ -10,10 +10,6 @@ import Page from './Page';
 
 function App() {
 
-
-
-
-  
   return (
    <div className='container'>
      <Header/>

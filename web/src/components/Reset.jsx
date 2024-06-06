@@ -1,7 +1,7 @@
 function Reset({setData, setUrl}) {
     const handleReset=(event)=>{
         event.preventDefault();
-        setData({name:"", slogan:"", technologies:"", repo:"", demo:"", desc:"", autor:"", job:"", image:"", photo:""});
+        setData({NAME:"", date:"", contact:"", ubicacion:"", gift:"", message:"", coupleName:"", quote:"", otherImage:"", coupleImage:""});
 
         setUrl(" ");
       

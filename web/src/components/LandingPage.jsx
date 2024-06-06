@@ -12,7 +12,7 @@ const LandingPage = () => {
     fetch("http://localhost:3000/cards")
     .then((response)=>response.json())
     .then(data=>{
-      setCards(data.results)
+      setCards(data.data)
     })
   }, []);
 

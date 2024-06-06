@@ -3,6 +3,7 @@
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require("cors");
+const mysql = require('mysql2/promise');
 
 // Creamos el servidor
 const server = express();
@@ -10,6 +11,20 @@ const server = express();
 // Configuramos el servidor
 server.use(cors());
 server.use(express.json({limit: "25mb"}));
+
+async function conexion() {
+  //defino la ubicacion y datos de BD
+  const conn = await mysql.createConnection({
+    host: 'sql.freedb.tech',
+    user: 'freedb_AdaMoon',
+    password: 'z*Sh563wR59vGaP',
+    database: 'freedb_Ada_Moon_Wedding'
+  });
+  //me conecto a la BD  definida
+  await conn.connect();
+  return conn;
+}
+
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 3000;
@@ -20,7 +35,7 @@ server.listen(serverPort, () => {
 const staticUrl="./web/dist";
 server.use(express.static(staticUrl));
 
-const cards =[
+/* const cards =[
   {
     image: "./images/perretes3.jpeg",
     photo: "./images/perretes17.jpeg",
@@ -69,13 +84,17 @@ const cards =[
       demo: "https://example.com/demo3",
       repo: "https://github.com/example/repo3"
     }
-]
+] */
 
 // Escribir nuestros endpoints
 //Endpoint- Landing
-server.get("/cards", (req, res)=>{
-    
-res.json({results: cards});
+server.get("/cards",async (req, res)=>{
+   const conn = await conexion();
+   const select = `select * FROM Event INNER JOIN guests
+   ON  idGuest = fkGuest`
+   const [results] = await conn.query(select)
+  res.json({data: results});
+  conn.end
 });
 
 //Endpoint - nueva tarjeta
