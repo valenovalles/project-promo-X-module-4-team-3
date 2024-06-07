@@ -6,7 +6,7 @@ import local from "../services/localStorage"
 
 function Page() {
 
-  const [data, setData] = useState({NAME:"", date:"", contact:"", ubicacion:"", gift:"", message:"", coupleName:"", quote:"", otherImage:"", coupleImage:""});
+  const [data, setData] = useState({NAME:"", date:"", contact:"", ubication:"", gift:"", message:"", coupleName:"", quote:"", otherImage:"", coupleImage:""});
 
 
   const [url, setUrl] = useState('');
@@ -25,7 +25,7 @@ function Page() {
   };
 
   const postData = () =>{
-    fetch('https://dev.adalab.es/api/projectCard',{
+    fetch('http://localhost:3000/newCard',{
         method:'POST',
         headers:{'content-type':'application/json'},
         body: JSON.stringify(data)
@@ -56,7 +56,7 @@ useEffect(() => {
 }, []);
 
 useEffect (()=>{
- if (data.NAME || data.date || data.contact || data.ubicacion || data.gift || data.message || data.coupleName || data.quote || data.otherImage || data.coupleImage) {
+ if (data.NAME || data.date || data.contact || data.ubication || data.gift || data.message || data.coupleName || data.quote || data.otherImage || data.coupleImage) {
     local.set("card", data);
   }
 }, [data]);
