@@ -24,7 +24,7 @@ function Form({form, updateAvatar, formData, postData, url, setData, setUrl}) {
       <fieldset className="addForm__group">
         <legend className="addForm__title">Información del encuentro</legend>
         <input className="addForm__input" type="text" value={formData.NAME} name="name" id="NAME" placeholder="Nombre de los invitados" onChange={handleInputChange}/>
-        <input className="addForm__input" type="text" name="slogan" id="date" placeholder="Fecha del enlace" value={formData.date} onChange={handleInputChange}/>
+        <input className="addForm__input" type="date" name="slogan" id="date" placeholder="Fecha del enlace" value={formData.date} onChange={handleInputChange}/>
         <div className="addForm__2col">
           <input className="addForm__input" type="url" name="repo" value={formData.ubication} id="ubication" placeholder="Url ubicación" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
           <input className="addForm__input" type="url" name="demo" value={formData.gift} id="gift" placeholder="Lista de regalos" onChange={handleInputChange}/>
