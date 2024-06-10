@@ -22,7 +22,7 @@ const LandingPage = () => {
 
   return (
     <main>
-       <Link className='link' to="/main"> <button className='button--large'>Ir a la página principal</button></Link>
+       <Link className='link' to="/main"> <button className='button--large'>Crea tu propia invitación</button></Link>
       <div className="main">
       {cards.map((cardData, index) => (
         <Card key={index} formData={cardData} />

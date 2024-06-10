@@ -12,6 +12,7 @@ const server = express();
 server.use(cors());
 server.use(express.json({limit: "25mb"}));
 server.set('view engine', 'ejs');
+require('dotenv').config();
 
 async function conexion() {
   //defino la ubicacion y datos de BD
@@ -33,63 +34,11 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-const staticUrl="./web/dist";
-server.use(express.static(staticUrl));
 
-/* const cards =[
-  {
-    image: "./images/perretes3.jpeg",
-    photo: "./images/perretes17.jpeg",
-    job: "Somos un combo ganador!",
-    autor: "Carlos y Raquel",
-    name: "Ana y Sergio", 
-    slogan: "22 de mayo de 2025", 
-    desc: "¿Adivinen qué? ¡Nos casamos! Únete a nuestra fiesta de amor y risas.",
-    technologies: "Whatsapp",
-    demo: "https://example.com/demo1",
-    repo: "https://github.com/example/repo1"
-  },
-  {
-    image: "./images/perretes2.jpeg",
-    photo: "./images/perretes11.jpeg",
-    job: "Amor, confianza, respeto, felicidad: ¡nuestro mantra!",
-    autor: "Valentina y Fátima",
-    name: "Lucía y Alejandro",
-    slogan: "25 de julio 2024",
-    desc: "¡Buenas vibras, gente genial! Nos casamos. ¿Listos para la fiesta?",
-    technologies: "teléfono",
-    demo: "https://example.com/demo2",
-    repo: "https://github.com/example/repo2"
-  },
-  {
-    image: "./images/perretes5.jpeg",
-    photo: "./images/perretes6.jpeg",
-    job: "Juntos: amor, confianza, respeto, felicidad.",
-    autor: "Fernando y Antonio",
-    name: "Carmen y Lola",
-    slogan: "12 de octubre de 2024",
-    desc: "¡Hemos decidido hacerlo oficial y casarnos!",
-    technologies: "Whatsapp",
-    demo: "https://example.com/demo3",
-    repo: "https://github.com/example/repo3"
-  },
-  {
-      image: "./images/perretes7.jpeg",
-      photo: "./images/perretes16.jpeg",
-      job: "Amor, confianza, respeto, felicidad: ¡nuestra esencia!",
-      autor: "Juana y Alba",
-      name: "Manuel y Antonio",
-      slogan: "12 de febrero de 2025",
-      desc: "Tenemos una gran noticia: ¡nos casamos! ",
-      technologies: "Teléfono",
-      demo: "https://example.com/demo3",
-      repo: "https://github.com/example/repo3"
-    }
-] */
 
 // Escribir nuestros endpoints
 //Endpoint- Landing
-server.get("/cards",async (req, res)=>{
+server.get("/cards",async (req, res)=>{ // nos lleva a la landing
    const conn = await conexion();
    const select = `select * FROM Event INNER JOIN guests
    ON  idGuest = fkGuest`
@@ -99,7 +48,7 @@ server.get("/cards",async (req, res)=>{
 });
 
 //Endpoint - nueva tarjeta
-server.post('/newCard', async (req, res) => {
+server.post('/newCard', async (req, res) => { //nos escribe en la landing
   //Recoger lo que viene del formulario
   const data = req.body;
   //Conectar con base de datos
@@ -124,9 +73,10 @@ server.post('/newCard', async (req, res) => {
     data.coupleImage,
     resultGuest.insertId,
   ]);
+
   //insert BD
   res.json({
-    cardURL: `http//:localhost:3000/cardDetail/${resultEvent.insertId}`,
+    cardURL: `/cardDetail/${resultEvent.insertId}`,
     success: true,
   });
 });
@@ -141,13 +91,12 @@ server.get('/cardDetail/:id', async (req,res) => {
   console.log(resultEvent);
 });
 
+
+
+
+
+  
+const staticUrl="./web/dist";
+server.use(express.static(staticUrl));
 //Servidor estático detalle
-server.use(express.static("./src/css"));
-
-
-//Endpoint - detalle
-server.get("/cardDetail", (req, res)=>{
-    
-  res.json({ });
-  });
-
+  server.use(express.static("./src/css"));
