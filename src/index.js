@@ -18,8 +18,8 @@ async function conexion() {
   //defino la ubicacion y datos de BD
   const conn = await mysql.createConnection({
     host: 'sql.freedb.tech',
-    user: 'freedb_AdaMoon',
-    password: 'z*Sh563wR59vGaP',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
     database: 'freedb_Ada_Moon_Wedding'
   });
   //me conecto a la BD  definida
