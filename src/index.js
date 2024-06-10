@@ -96,7 +96,7 @@ server.get('/cardDetail/:id', async (req,res) => {
 
 
   
-const staticUrl="./web/dist";
+const staticUrl="./src/public-react";
 server.use(express.static(staticUrl));
 //Servidor estático detalle
   server.use(express.static("./src/css"));
