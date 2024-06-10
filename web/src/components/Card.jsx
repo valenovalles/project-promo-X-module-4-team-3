@@ -11,6 +11,7 @@ function Card({formData}) {
 
   return (
     <section className="preview">
+      <a href={`http://localhost:3000/cardDetail/${formData.idEvent}`}>
       <div className="projectImage" style={{ backgroundImage: `url(${imageProyect})` }}>
     
       </div>
@@ -40,12 +41,11 @@ function Card({formData}) {
 
               <a className="icon icon__www" href={formData.gift || ""} target= "_blank" title="Haz click para ver la ubicación del evento" ><span className="material-symbols-outlined">
               featured_seasonal_and_gifts</span>{"Regalos"}</a>
-
-        
             
           </div>
         </div>
       </article>
+      </a>
     </section>
   )
 }
