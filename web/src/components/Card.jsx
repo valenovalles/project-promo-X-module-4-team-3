@@ -11,7 +11,7 @@ function Card({formData}) {
 
   return (
     <section className="preview">
-      <a href={`http://localhost:3000/cardDetail/${formData.idEvent}`}>
+      <a href={`https://project-promo-x-module-4-team-3-1.onrender.com/cardDetail/${formData.idEvent}`}>
         <div className="projectImage" style={{ backgroundImage: `url(${imageProyect})` }}>
       
         </div>

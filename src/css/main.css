@@ -131,7 +131,7 @@
  .projectImage {
    
     width: 85vw;
-    aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; */
     outline: solid 1px pink;
     background-position: top center;
     background-size: cover;

@@ -9,7 +9,7 @@ const LandingPage = () => {
 
    useEffect(() => {
 
-    fetch("http://localhost:3000/cards")
+    fetch("https://project-promo-x-module-4-team-3-1.onrender.com/cards")
     .then((response)=>response.json())
     .then(data=>{
       setCards(data.data)
