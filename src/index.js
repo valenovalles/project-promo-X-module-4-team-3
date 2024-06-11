@@ -40,7 +40,7 @@ server.listen(serverPort, () => {
 //Endpoint- Landing
 server.get("/cards",async (req, res)=>{ // nos lleva a la landing
    const conn = await conexion();
-   const select = `SELECT NAME, DATE_FORMAT(Event.date, '%d, %M, %Y') AS date, ubication, gift, contact, message, coupleName, quote, otherImage, coupleImage FROM Event inner join guests on fkGuest = idGuest `
+   const select = `SELECT idEvent, NAME, DATE_FORMAT(Event.date, '%d, %M, %Y') AS date, ubication, gift, contact, message, coupleName, quote, otherImage, coupleImage FROM Event inner join guests on fkGuest = idGuest `
    const [results] = await conn.query(select)
   res.json({data: results});
   conn.end
@@ -84,7 +84,7 @@ server.post('/newCard', async (req, res) => { //nos escribe en la landing
 server.get('/cardDetail/:id', async (req,res) => {
   const conn = await conexion();
   const {id} = req.params;
-  const findEvent = "SELECT NAME, DATE_FORMAT(Event.date, '%d, %M, %Y') AS date, ubication, gift, contact, message, coupleName, quote, otherImage, coupleImage FROM Event inner join guests on fkGuest = idGuest WHERE idEvent = ?;";  
+  const findEvent = "SELECT idEvent, NAME, DATE_FORMAT(Event.date, '%d, %M, %Y') AS date, ubication, gift, contact, message, coupleName, quote, otherImage, coupleImage FROM Event inner join guests on fkGuest = idGuest WHERE idEvent = ?;";  
   const [resultEvent] = await conn.query(findEvent, [id]);
   res.render('detail', {detail: resultEvent[0]});
   console.log(resultEvent);

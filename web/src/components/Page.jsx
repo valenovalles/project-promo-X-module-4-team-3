@@ -25,7 +25,7 @@ function Page() {
   };
 
   const postData = () =>{
-    fetch('https://project-promo-x-module-4-team-3-1.onrender.com/newCard',{
+    fetch('http://localhost:3000/newCard',{
         method:'POST',
         headers:{'content-type':'application/json'},
         body: JSON.stringify(data)

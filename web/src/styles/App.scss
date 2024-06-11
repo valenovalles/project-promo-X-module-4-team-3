@@ -81,6 +81,10 @@
     text-decoration: none;
     padding: 7px 5px;
     gap: 7px;
+    font: var(--font-title-brand);
+    text-transform: capitalize;
+    color: #585E48;
+    font-size: 20px;
   }
   
   .header .header__companyLogo {
@@ -88,12 +92,7 @@
     color: var(--color-white);
   }
   
-  .header .header__title {
-    font: var(--font-title-brand);
-    text-transform: capitalize;
-    color: #585E48;
-    font-size: 20px;
-  }
+
   
   @media screen and (min-width: 768px) {
     .main {
