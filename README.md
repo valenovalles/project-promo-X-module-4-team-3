@@ -1,0 +1,48 @@
+# Project-Promo-X-Module-4-Team-3 
+
+![logo-wedding](https://github.com/Raquelcb24/project-promo-X-module-3-team-3/assets/161826787/68d1e5a9-8b02-4fa6-b050-8fa64f20c201)
+
+
+## 💘​ **ADA_MOON_WEADDING** 
+
+Partiendo de un modelo facilitado a través de la plataforma de Zeplin(🔗 https://app.zeplin.io/project/5c94ca7ad58aef056fdd6a67), nos han encargado dar funcionalidad a una página y poder personalizarla todo lo que eremos, aplicando lo aprendido con HTML, CSS, JavaScript, React y Node para el back. Hemos decidido crear una web para crear invitaciones de boda personalizadas en unos sencillos pasos. 
+
+## 📁 **Acceso al proyecto**
+
+Para acceder al proyecto puedes clonar el repositorio:
+
+git clone [(https://github.com/valenovalles/project-promo-X-module-4-team-3.git)]
+
+## 💻​**¿Cómo arrancar el proyecto?**
+
+Instala las dependecias locales ejecutando en la terminal el comando: npm install
+Instala el paquete del enrutador React Router DOM: npm install react-router-dom
+Instala la librería para validar las props: npm install prop-types
+Instala las dependencias para el back: Express, Cors, MySQL, Dovend
+Arranca el proyecto ejecutando a continuación en la terminal: npm run dev
+
+## ​✍️​**Crea tu invitación personalizada**
+
+Vamos a comenzar. La vista previa se irá actualizando a medida que vamos rellenando.
+
+- Rellena los campos del formulario.
+- Elige dos imágenes que representen a tu pareja y tu enlace.
+- Por último, crea tu invitación.
+
+## ​✍📂​**Base de datos**
+El proyecto trabaja con una base de datos creada en FreeDB en la cual se almacenan las nuevas tarjetas creadas por el usuario. 
+
+## ✅**Tecnologías utilizadas**
+
+HTML5
+CSS3
+React JS
+React Router
+Prop-types
+npm
+Node
+Git
+
+## ​👰🏻‍♀️​​**Nuestro equipo**​👰🏻‍♀️​​
+
+El proyecto fue creado por Fátima, Lucía, Raquel y Valentina durante el Módulo 3 y 4 del bootcamp de Programación Web de Adalab.
