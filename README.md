@@ -5,19 +5,20 @@
 
 ## 💘​ **ADA_MOON_WEADDING** 
 
-Partiendo de un modelo facilitado a través de la plataforma de Zeplin(🔗 https://app.zeplin.io/project/5c94ca7ad58aef056fdd6a67), nos han encargado dar funcionalidad a una página y poder personalizarla todo lo que eremos, aplicando lo aprendido hasta ahora con HTML, CSS, JavaScript y React. Hemos decidido crear una web para crear invitaciones de boda personalizadas en unos sencillos pasos. 
+Partiendo de un modelo facilitado a través de la plataforma de Zeplin(🔗 https://app.zeplin.io/project/5c94ca7ad58aef056fdd6a67), nos han encargado dar funcionalidad a una página y poder personalizarla todo lo que eremos, aplicando lo aprendido con HTML, CSS, JavaScript, React y Node para el back. Hemos decidido crear una web para crear invitaciones de boda personalizadas en unos sencillos pasos. 
 
 ## 📁 **Acceso al proyecto**
 
 Para acceder al proyecto puedes clonar el repositorio:
 
-git clone [https://github.com/luciadelafuente/project-promo-x-module-2-team-1.git](https://github.com/Raquelcb24/project-promo-X-module-3-team-3)
+git clone [(https://github.com/valenovalles/project-promo-X-module-4-team-3.git)]
 
 ## 💻​**¿Cómo arrancar el proyecto?**
 
 Instala las dependecias locales ejecutando en la terminal el comando: npm install
 Instala el paquete del enrutador React Router DOM: npm install react-router-dom
 Instala la librería para validar las props: npm install prop-types
+Instala las dependencias para el back: Express, Cors, MySQL, Dovend
 Arranca el proyecto ejecutando a continuación en la terminal: npm run dev
 
 ## ​✍️​**Crea tu invitación personalizada**
