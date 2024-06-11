@@ -25,7 +25,7 @@ function Page() {
   };
 
   const postData = () =>{
-    fetch('http://localhost:3000/newCard',{
+    fetch('http://localhost:3000/newCard',{ 
         method:'POST',
         headers:{'content-type':'application/json'},
         body: JSON.stringify(data)

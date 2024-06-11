@@ -8,7 +8,6 @@ const LandingPage = () => {
   const [cards, setCards] = useState([]);
 
    useEffect(() => {
-
     fetch("http://localhost:3000/cards")
     .then((response)=>response.json())
     .then(data=>{

@@ -11,7 +11,7 @@ function Card({formData}) {
 
   return (
     <section className="preview">
-      <a href={`http://localhost:3000/cardDetail/${formData.idEvent}`}>
+      <a href={`http://localhost:3000/${formData.idEvent}`}>
         <div className="projectImage" style={{ backgroundImage: `url(${imageProyect})` }}>
       
         </div>
