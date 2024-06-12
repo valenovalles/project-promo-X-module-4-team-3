@@ -45,7 +45,7 @@ function Form({form, updateAvatar, formData, postData, url, setData, setUrl}) {
         <button className="button--large" onClick= {handleClickUrl}>Crear invitación</button>
        <Reset setUrl={setUrl} setData={setData}/>
       </fieldset>
-      <a className={urlTextClass} href={`http://localhost:3000/${url}`} target="_blank">{urlText}</a>
+      <a className={urlTextClass} href={`https://project-promo-x-module-4-team-3-1.onrender.com${url}`} target="_blank">{urlText}</a>
     </form>
   )
 }
