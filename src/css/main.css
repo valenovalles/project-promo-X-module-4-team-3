@@ -62,17 +62,17 @@
     margin-bottom: 2.5rem;
     background-color: var(--color-dark);
   }
-  .header .header__brand {
+  .header__brand {
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 7px 40px;
+    padding: 7px;
     gap: 7px;
     margin-top: 40px;
     font: var(--font-title-brand);
     text-transform: capitalize;
     color: #585E48;
-    font-size: 22px;
+    font-size: 20px;
   }
   .header .header__companyLogo {
     height: 50px;
