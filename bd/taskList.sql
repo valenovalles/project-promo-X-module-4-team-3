@@ -1,1 +1,0 @@
-SELECT * FROM to_do_list.task;
