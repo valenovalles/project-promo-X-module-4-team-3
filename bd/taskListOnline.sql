@@ -1,0 +1,1 @@
+SELECT * FROM bkntobq56q2k4qlcspjq.tareas;
